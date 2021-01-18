@@ -8,9 +8,19 @@ namespace WebLeslieApp.Controllers
 {
     public class HomeController:Controller
     {
-        public string Index()
+        public ViewResult Index()
         {
-            return "Welcome Leslie Index!";
+            return View();
+        }
+
+        public ViewResult AboutUs()
+        {
+            return View();
+        }
+
+        public ViewResult AboutYou()
+        {
+            return View();
         }
     }
 }
