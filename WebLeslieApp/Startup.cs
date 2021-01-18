@@ -26,6 +26,25 @@ namespace WebLeslieApp
                 app.UseDeveloperExceptionPage();
             }
 
+            //app.Use(async (context,next) => 
+            //{
+            //    await context.Response.WriteAsync("Hello from my first middleware");
+            //    await next();
+            //    await context.Response.WriteAsync("Hello from my first middleware Response");
+            //});
+
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("Hello from my Second middleware");
+            //    await next();
+            //    await context.Response.WriteAsync("Hello from my Second middleware Response");
+            //});
+
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("Hello from my Third middleware");
+            //    await next();
+            //});
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
@@ -33,6 +52,14 @@ namespace WebLeslieApp
                 endpoints.MapGet("/", async context =>
                 {
                     await context.Response.WriteAsync("Hello hahahah leslie!");
+                });
+            });
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapGet("/ha", async context =>
+                {
+                    await context.Response.WriteAsync("HAHAH!");
                 });
             });
         }
