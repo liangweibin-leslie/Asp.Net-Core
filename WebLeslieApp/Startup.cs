@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using System.IO;
+using Microsoft.Extensions.FileProviders;
 
 namespace WebLeslieApp
 {
@@ -49,6 +51,13 @@ namespace WebLeslieApp
             //    await next();
             //});
             app.UseRouting();
+            app.UseStaticFiles();
+            //app.UseStaticFiles(new StaticFileOptions()
+            //{
+            //    FileProvider=new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),"MyStaticFiles")),
+            //    RequestPath="/MyStaticFiles"
+            //}
+            //);
 
             //app.UseEndpoints(endpoints =>
             //{

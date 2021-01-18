@@ -104,3 +104,4 @@ G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.Co
 G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\WebLeslieApp.csproj.CoreCompileInputs.cache
 G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\WebLeslieApp.MvcApplicationPartsAssemblyInfo.cache
 G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\AboutYou.cshtml.g.cs
+G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\libman.json
