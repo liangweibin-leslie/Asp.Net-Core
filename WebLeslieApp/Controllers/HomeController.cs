@@ -18,7 +18,7 @@ namespace WebLeslieApp.Controllers
             return View();
         }
 
-        public ViewResult AboutYou()
+        public ViewResult ContactUs()
         {
             return View();
         }
