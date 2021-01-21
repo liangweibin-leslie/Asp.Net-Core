@@ -395,3 +395,5 @@ G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_
 G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\ContactUs.cshtml.g.cs
 G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\Book\GetAllBooks.cshtml.g.cs
 G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\Book\GetBook.cshtml.g.cs
+G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs

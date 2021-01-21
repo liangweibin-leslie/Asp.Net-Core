@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Dynamic;
+using WebLeslieApp.Models;
 
 namespace WebLeslieApp.Controllers
 {
@@ -10,6 +12,7 @@ namespace WebLeslieApp.Controllers
     {
         public ViewResult Index()
         {
+            ViewData["book"] = new BookModel() { Author = "Libai", Title = "Huanghe" };
             return View();
         }
 
