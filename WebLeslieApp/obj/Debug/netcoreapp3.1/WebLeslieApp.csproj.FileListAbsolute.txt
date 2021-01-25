@@ -1,6 +1,5 @@
 G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
 G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\appsettings.json
-G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\WebLeslieApp.exe
 G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\WebLeslieApp.deps.json
 G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\WebLeslieApp.runtimeconfig.json
@@ -101,7 +100,6 @@ G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAna
 G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\AboutYou.cshtml.g.cs
 G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\libman.json
 G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Antiforgery.dll
 G:\CSharp_test\Asp.Net\WebLeslieApp\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -397,3 +395,5 @@ G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\Book\Get
 G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\Book\GetBook.cshtml.g.cs
 G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebLeslieApp.styles.css
+G:\CSharp_test\Asp.Net\WebLeslieApp\obj\Debug\netcoreapp3.1\Razor\Views\Book\AddNewBook.cshtml.g.cs
