@@ -22,9 +22,11 @@ namespace WebLeslieApp.Controllers
             return View(data);
         }
 
-        public ViewResult GetBook(int id)
+        public ViewResult GetBook(int id,string nameOfBook)
         {
-            var data = _bookRepository.GetBookById(id);
+            dynamic data = new System.Dynamic.ExpandoObject();
+            data.book = _bookRepository.GetBookById(id);
+            data.Name = "Nitish"; 
             return View(data);
         }
 

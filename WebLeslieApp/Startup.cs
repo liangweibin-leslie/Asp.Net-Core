@@ -72,6 +72,9 @@ namespace WebLeslieApp
             app.UseEndpoints(endpoints =>
                 {
                     endpoints.MapDefaultControllerRoute();
+                    //endpoints.MapControllerRoute(
+                    //    name:"Default",
+                    //    pattern:"bookapp/{controller=Home}/{action=index}/{id?}");
                 });
 
         }
