@@ -12,9 +12,9 @@ namespace WebLeslieApp.Controllers
     {
         private readonly BookRepository _bookRepository = null;
 
-        public BookController()
+        public BookController(BookRepository bookRepository)
         {
-            _bookRepository = new BookRepository();
+            _bookRepository = bookRepository;
         }
         public ViewResult GetAllBooks()
         {
@@ -43,6 +43,7 @@ namespace WebLeslieApp.Controllers
         [HttpPost]
         public ViewResult AddNewBook(BookModel bookModel)
         {
+            _bookRepository.AddNewBook(bookModel);
             return View();
         }
     }

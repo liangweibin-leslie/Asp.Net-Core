@@ -10,6 +10,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
 using Microsoft.Extensions.FileProviders;
+using WebLeslieApp.Data;
+using Microsoft.EntityFrameworkCore;
+using WebLeslieApp.Repository;
 
 namespace WebLeslieApp
 {
@@ -20,10 +23,12 @@ namespace WebLeslieApp
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddMvc();
+            services.AddDbContext<BookStoreContext>(options =>options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=BookStore;Integrated Security=True;"));
             services.AddControllersWithViews();
 #if DEBUG
             services.AddRazorPages().AddRazorRuntimeCompilation();
-#endif        
+#endif       
+            services.AddScoped<BookStoreContext,BookStoreContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
