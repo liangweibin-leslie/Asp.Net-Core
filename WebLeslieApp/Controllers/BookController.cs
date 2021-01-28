@@ -16,9 +16,9 @@ namespace WebLeslieApp.Controllers
         {
             _bookRepository = bookRepository;
         }
-        public ViewResult GetAllBooks()
+        public async Task<ViewResult> GetAllBooks()
         {
-            var data= _bookRepository.GetAllBooks();
+            var data=await _bookRepository.GetAllBooks();
             return View(data);
         }
 
@@ -35,15 +35,21 @@ namespace WebLeslieApp.Controllers
             return _bookRepository.SearchBook(bookName,authorName);
         }
 
-        public ViewResult AddNewBook()
+        public ViewResult AddNewBook(bool isSuccess = false,int bookId=0)
         {
+            ViewBag.IsSuccess = isSuccess;
+            ViewBag.BookId = bookId;
             return View();
         }
 
         [HttpPost]
-        public ViewResult AddNewBook(BookModel bookModel)
+        public async Task<IActionResult> AddNewBook(BookModel bookModel)
         {
-            _bookRepository.AddNewBook(bookModel);
+            int id = await _bookRepository.AddNewBook(bookModel);
+            if (id>0)
+            {
+                return RedirectToAction(nameof(AddNewBook),new { isSuccess = true,bookId =id});
+            }
             return View();
         }
     }

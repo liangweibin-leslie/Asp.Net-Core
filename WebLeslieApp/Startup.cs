@@ -28,7 +28,7 @@ namespace WebLeslieApp
 #if DEBUG
             services.AddRazorPages().AddRazorRuntimeCompilation();
 #endif       
-            services.AddScoped<BookStoreContext,BookStoreContext>();
+            services.AddScoped<BookRepository, BookRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
