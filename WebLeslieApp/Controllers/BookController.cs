@@ -22,11 +22,9 @@ namespace WebLeslieApp.Controllers
             return View(data);
         }
 
-        public ViewResult GetBook(int id,string nameOfBook)
+        public async Task<ViewResult> GetBook(int id)
         {
-            dynamic data = new System.Dynamic.ExpandoObject();
-            data.book = _bookRepository.GetBookById(id);
-            data.Name = "Nitish"; 
+            var data = await _bookRepository.GetBookById(id);
             return View(data);
         }
 
@@ -45,11 +43,17 @@ namespace WebLeslieApp.Controllers
         [HttpPost]
         public async Task<IActionResult> AddNewBook(BookModel bookModel)
         {
-            int id = await _bookRepository.AddNewBook(bookModel);
-            if (id>0)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(AddNewBook),new { isSuccess = true,bookId =id});
+                int id = await _bookRepository.AddNewBook(bookModel);
+                if (id > 0)
+                {
+                    return RedirectToAction(nameof(AddNewBook), new { isSuccess = true, bookId = id });
+                }
             }
+            //ViewBag.IsSuccess = false;
+            //ViewBag.BookId = 0;
+            ModelState.AddModelError("","This is my custom error message");
             return View();
         }
     }

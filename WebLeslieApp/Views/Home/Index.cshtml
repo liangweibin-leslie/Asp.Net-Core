@@ -6,7 +6,7 @@
     var book = ViewData["Book"] as BookModel;
 }
 
-@section breakcrumb{
+@*@section breakcrumb{
     <nav aria-label="breakcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -14,12 +14,12 @@
             <li class="breadcrumb-item"><a href="#">Index</a></li>
         </ol>
     </nav>
-}
+}*@
 <section class="jumbotron text-center">
     <div class="container">
         <h1>Welcome to Bookstore</h1>
-        <h1>Id=@book.Id</h1>
-        <h1>Title=@book.Title</h1>
+        @*<h1>Id=@book.Id</h1>
+        <h1>Title=@book.Title</h1>*@
         <p class="lead text-muted">
             Specifies that a Razor Page model property should be set
             with the current PageContext when creating the model
