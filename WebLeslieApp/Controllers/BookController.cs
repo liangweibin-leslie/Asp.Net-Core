@@ -48,15 +48,15 @@ namespace WebLeslieApp.Controllers
             //var group1 = new SelectListGroup() { Name = "Group 1" };
             //var group2 = new SelectListGroup() { Name = "Group 2" ,Disabled=true};
             //var group3 = new SelectListGroup() { Name = "Group 3" };
-            ViewBag.Language = new List<SelectListItem>()
-            {
-                new SelectListItem(){Text="English",Value="1"},
-                new SelectListItem(){Text="Amerina",Value="2"},
-                new SelectListItem(){Text="Chinese",Value="3"},
-                new SelectListItem(){Text="Hindi",Value="4"},
-                new SelectListItem(){Text="Japanese",Value="5"},
-                new SelectListItem(){Text="Urbu",Value="6"}
-            };
+            //ViewBag.Language = new List<SelectListItem>()
+            //{
+            //    new SelectListItem(){Text="English",Value="1"},
+            //    new SelectListItem(){Text="Amerina",Value="2"},
+            //    new SelectListItem(){Text="Chinese",Value="3"},
+            //    new SelectListItem(){Text="Hindi",Value="4"},
+            //    new SelectListItem(){Text="Japanese",Value="5"},
+            //    new SelectListItem(){Text="Urbu",Value="6"}
+            //};
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
             return View(model);
@@ -73,15 +73,15 @@ namespace WebLeslieApp.Controllers
                     return RedirectToAction(nameof(AddNewBook), new { isSuccess = true, bookId = id });
                 }
             }
-            ViewBag.Language = new List<SelectListItem>()
-            {
-                new SelectListItem(){Text="English",Value="1"},
-                new SelectListItem(){Text="Amerina",Value="2"},
-                new SelectListItem(){Text="Chinese",Value="3"},
-                new SelectListItem(){Text="Hindi",Value="4"},
-                new SelectListItem(){Text="Japanese",Value="5"},
-                new SelectListItem(){Text="Urbu",Value="6"}
-            };
+            //ViewBag.Language = new List<SelectListItem>()
+            //{
+            //    new SelectListItem(){Text="English",Value="1"},
+            //    new SelectListItem(){Text="Amerina",Value="2"},
+            //    new SelectListItem(){Text="Chinese",Value="3"},
+            //    new SelectListItem(){Text="Hindi",Value="4"},
+            //    new SelectListItem(){Text="Japanese",Value="5"},
+            //    new SelectListItem(){Text="Urbu",Value="6"}
+            //};
             //ViewBag.IsSuccess = false;
             //ViewBag.BookId = 0;
 

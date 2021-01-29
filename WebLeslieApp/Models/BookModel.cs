@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using WebLeslieApp.Enums;
 
 namespace WebLeslieApp.Models
 {
@@ -25,7 +26,7 @@ namespace WebLeslieApp.Models
         public string Language { get; set; }
 
         [Required(ErrorMessage ="Please choose the languages of your book")]
-        public List<string> MultiLanguage { get; set; }
+        public LanguageEnum LanguageEnum { get; set; }
 
         [Required(ErrorMessage ="Please enter the pages")]
         [Display(Name ="Total pages of book")]
