@@ -24,6 +24,9 @@ namespace WebLeslieApp.Models
 
         public string Language { get; set; }
 
+        [Required(ErrorMessage ="Please choose the languages of your book")]
+        public List<string> MultiLanguage { get; set; }
+
         [Required(ErrorMessage ="Please enter the pages")]
         [Display(Name ="Total pages of book")]
         public int TotalPages { get; set; }
