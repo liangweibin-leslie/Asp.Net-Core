@@ -26,6 +26,7 @@ namespace WebLeslieApp.Repository
                 Description = model.Description,
                 Title = model.Title,
                 TotalPages = model.TotalPages,
+                Language = model.Language,
                 UpdatedOn = DateTime.UtcNow
             };
 
