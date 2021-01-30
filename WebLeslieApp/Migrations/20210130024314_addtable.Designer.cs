@@ -10,8 +10,8 @@ using WebLeslieApp.Data;
 namespace WebLeslieApp.Migrations
 {
     [DbContext(typeof(BookStoreContext))]
-    [Migration("20210127144910_add_datetime")]
-    partial class add_datetime
+    [Migration("20210130024314_addtable")]
+    partial class addtable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

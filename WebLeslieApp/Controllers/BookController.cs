@@ -12,10 +12,12 @@ namespace WebLeslieApp.Controllers
     public class BookController : Controller
     {
         private readonly BookRepository _bookRepository = null;
+        private readonly LanguageRepository _languageRepository = null;
 
-        public BookController(BookRepository bookRepository)
+        public BookController(BookRepository bookRepository,LanguageRepository languageRepository)
         {
             _bookRepository = bookRepository;
+            _languageRepository = languageRepository;
         }
         public async Task<ViewResult> GetAllBooks()
         {
@@ -34,12 +36,14 @@ namespace WebLeslieApp.Controllers
             return _bookRepository.SearchBook(bookName,authorName);
         }
 
-        public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0)
+        public async Task<ViewResult> AddNewBook(bool isSuccess = false, int bookId = 0)
         {
             var model = new BookModel()
             {
                 //Language = "2"
             };
+
+            ViewBag.Language = new SelectList(await _languageRepository.GetLanguages(),"Id","Name");
             //ViewBag.Language = GetLanguage().Select(x => new SelectListItem()
             //{
             //    Text = x.Text,
@@ -84,18 +88,9 @@ namespace WebLeslieApp.Controllers
             //};
             //ViewBag.IsSuccess = false;
             //ViewBag.BookId = 0;
-
+            ViewBag.Language = new SelectList(await _languageRepository.GetLanguages(), "Id", "Name");
             return View();
         }
 
-        private List<LanguageModel> GetLanguage()
-        {
-            return new List<LanguageModel>()
-            {
-                new LanguageModel(){Id=1,Text="English"},
-                new LanguageModel(){Id=2,Text="Chinese"},
-                new LanguageModel(){Id=3,Text="Hindi"}
-            };
-        }
     }
 }

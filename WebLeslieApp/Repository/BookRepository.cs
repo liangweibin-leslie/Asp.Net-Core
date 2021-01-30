@@ -26,7 +26,7 @@ namespace WebLeslieApp.Repository
                 Description = model.Description,
                 Title = model.Title,
                 TotalPages = model.TotalPages,
-                Language = model.Language,
+                LanguageId = model.LanguageId,
                 UpdatedOn = DateTime.UtcNow
             };
 
@@ -50,7 +50,8 @@ namespace WebLeslieApp.Repository
                         Category = book.Category,
                         Description = book.Description,
                         Id = book.Id,
-                        Language = book.Language,
+                        LanguageId = book.LanguageId,
+                        Language = book.Language.Name,
                         Title = book.Title,
                         TotalPages = book.TotalPages
                     });
@@ -61,38 +62,25 @@ namespace WebLeslieApp.Repository
 
         public async Task<BookModel> GetBookById(int id)
         {
-            var book = await _context.Books.FindAsync(id);
-            if (book != null)
-            {
-                var bookDetails = new BookModel()
+            return await _context.Books.Where(x => x.Id == id)
+                .Select(book => new BookModel()
                 {
                     Author = book.Author,
                     Category = book.Category,
                     Description = book.Description,
                     Id = book.Id,
-                    Language = book.Language,
+                    LanguageId = book.LanguageId,
+                    Language = book.Language.Name,
                     Title = book.Title,
                     TotalPages = book.TotalPages
-                };
-                return bookDetails;
-            }
-            return null;
+                }).FirstOrDefaultAsync();
+            
         }
 
         public List<BookModel> SearchBook(string title,string authorName)
         {
-            return DataSource().Where(x => x.Title.Contains(title) || x.Author.Contains(authorName)).ToList();
+            return null;
         }
 
-        private List<BookModel> DataSource()
-        {
-            return new List<BookModel>()
-            {
-                new BookModel(){Id=1,Title="MVC",Author="Leslie",Description="This is the description for MVC book",Category="Program",Language="English",TotalPages=1023},
-                new BookModel(){Id=2,Title="C#",Author="Leslie",Description="This is the description for C# book",Category="Teach",Language="Chinese",TotalPages=193},
-                new BookModel(){Id=3,Title="Java",Author="Catherian",Description="This is the description for JAVA book",Category="Develop",Language="English",TotalPages=860},
-                new BookModel(){Id=4,Title="Javascript",Author="Catherina",Description="This is the description for Javascript book",Category="Lanch",Language="English",TotalPages=683}
-            };
-        }
     }
 }
