@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using WebLeslieApp.Enums;
+using WebLeslieApp.Helpers;
 
 namespace WebLeslieApp.Models
 {
@@ -11,8 +12,9 @@ namespace WebLeslieApp.Models
     {
         public int Id { get; set; }
 
-        [StringLength(100,MinimumLength =3)]
-        [Required(ErrorMessage ="Please enter the title of your book")]
+        //[StringLength(100,MinimumLength =3)]
+        //[Required(ErrorMessage ="Please enter the title of your book")]
+        [MyCustomValidation("mvc")]
         public string Title { get; set; }
 
         [Required(ErrorMessage ="Please enter the author name")]

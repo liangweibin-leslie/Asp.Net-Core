@@ -1,25 +1,24 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-
-@{ 
+@{
     var book = ViewData["Book"] as BookModel;
 }
 
 @*@section breakcrumb{
-    <nav aria-label="breakcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Page 1</a></li>
-            <li class="breadcrumb-item"><a href="#">Index</a></li>
-        </ol>
-    </nav>
-}*@
+        <nav aria-label="breakcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Page 1</a></li>
+                <li class="breadcrumb-item"><a href="#">Index</a></li>
+            </ol>
+        </nav>
+    }*@
 <section class="jumbotron text-center">
     <div class="container">
         <h1>Welcome to Bookstore</h1>
         @*<h1>Id=@book.Id</h1>
-        <h1>Title=@book.Title</h1>*@
+            <h1>Title=@book.Title</h1>*@
         <p class="lead text-muted">
             Specifies that a Razor Page model property should be set
             with the current PageContext when creating the model
@@ -32,7 +31,9 @@
 </section>
 <div class="py-5 bg-light">
     <div class="container">
-        <h3>Top books</h3>
+        @*<h3>Top books</h3>*@
+        <big>Top books</big>
+        @*<p big>Top book using attribute</p>*@
         <div class="row">
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">

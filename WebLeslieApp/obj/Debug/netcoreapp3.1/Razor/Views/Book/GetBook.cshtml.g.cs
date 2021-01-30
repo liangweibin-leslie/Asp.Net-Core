@@ -19,8 +19,15 @@ using WebLeslieApp.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "G:\CSharp_test\Asp.Net\WebLeslieApp\Views\_ViewImports.cshtml"
+using WebLeslieApp;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"583cef0d724c586b37a6df0abb7916f3ae331368", @"/Views/Book/GetBook.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d7d068a0e5497887ee6ccc59335fbc515cb63ae3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fe0599023a5700203b8e8503b52e50dfde24e2ee", @"/Views/_ViewImports.cshtml")]
     public class Views_Book_GetBook : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
