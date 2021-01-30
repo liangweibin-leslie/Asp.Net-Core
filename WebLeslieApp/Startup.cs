@@ -27,6 +27,11 @@ namespace WebLeslieApp
             services.AddControllersWithViews();
 #if DEBUG
             services.AddRazorPages().AddRazorRuntimeCompilation();
+            //Uncomment this code to disable client side validations
+            //    .AddViewOptions(option => 
+            //{
+            //    option.HtmlHelperOptions.ClientValidationEnabled = false; 
+            //});
 #endif       
             services.AddScoped<BookRepository, BookRepository>();
             services.AddScoped<LanguageRepository, LanguageRepository>();
