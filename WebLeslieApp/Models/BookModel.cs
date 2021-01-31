@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using WebLeslieApp.Enums;
 using WebLeslieApp.Helpers;
+using Microsoft.AspNetCore.Http;
 
 namespace WebLeslieApp.Models
 {
@@ -34,5 +35,17 @@ namespace WebLeslieApp.Models
         [Required(ErrorMessage ="Please enter the pages")]
         [Display(Name ="Total pages of book")]
         public int TotalPages { get; set; }
+
+        [Display(Name ="Choose the cover photo of your book")]
+        [Required]
+        public IFormFile CoverPhoto { get; set; }
+
+        public string CoverImageUrl { get; set; }
+
+        [Display(Name = "Choose the gallery images of your book")]
+        [Required]
+        public IFormFileCollection GalleryFiles { get; set; }
+
+        public List<GalleryModel> Gallery { get; set; }
     }
 }
